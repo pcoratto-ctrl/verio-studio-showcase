@@ -4,7 +4,6 @@ import { toast } from "sonner";
 import { Reveal } from "./Reveal";
 import { EMAIL, INSTAGRAM_URL, LINKEDIN_URL, WHATSAPP_URL } from "./constants";
 
-
 export function Contact() {
   const [loading, setLoading] = useState(false);
 
@@ -40,11 +39,11 @@ export function Contact() {
         </div>
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
-          {/* WhatsApp featured card */}
+          {/* WhatsApp featured card — cobalt accent, no green */}
           <Reveal className="lg:col-span-5">
-            <div className="flex h-full flex-col justify-between rounded-2xl bg-foreground p-8 text-background sm:p-10">
+            <div className="flex h-full flex-col justify-between rounded-2xl border-2 border-cobalt bg-card p-8 sm:p-10">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-background/30 px-3 py-1 text-xs font-medium text-background">
+                <div className="inline-flex items-center gap-2 rounded-full border border-cobalt/30 px-3 py-1 text-xs font-medium text-cobalt">
                   <MessageCircle className="h-3.5 w-3.5" />
                   Il modo più rapido
                 </div>
@@ -54,7 +53,7 @@ export function Contact() {
                 >
                   Scrivici su WhatsApp.
                   <br />
-                  <span className="opacity-60">Rispondiamo in giornata.</span>
+                  <span className="text-muted-foreground">Rispondiamo in giornata.</span>
                 </h3>
               </div>
 
@@ -63,14 +62,14 @@ export function Contact() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-background px-6 py-4 text-sm font-medium text-foreground transition-opacity hover:opacity-90 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-cobalt px-6 py-4 text-sm font-medium text-cobalt-foreground transition-opacity hover:opacity-90 sm:w-auto"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Apri WhatsApp
                 </a>
 
-                <div className="space-y-3 border-t border-background/10 pt-6 text-sm">
-                  <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 hover:opacity-70">
+                <div className="space-y-3 border-t border-hairline pt-6 text-sm">
+                  <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 hover:text-cobalt">
                     <Mail className="h-4 w-4" />
                     {EMAIL}
                   </a>
@@ -78,7 +77,7 @@ export function Contact() {
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-3 hover:opacity-70"
+                    className="flex items-center gap-3 hover:text-cobalt"
                   >
                     <Instagram className="h-4 w-4" />
                     Instagram
@@ -87,7 +86,7 @@ export function Contact() {
                     href={LINKEDIN_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-3 hover:opacity-70"
+                    className="flex items-center gap-3 hover:text-cobalt"
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
@@ -96,7 +95,6 @@ export function Contact() {
               </div>
             </div>
           </Reveal>
-
 
           {/* Form */}
           <Reveal delay={0.1} className="lg:col-span-7">

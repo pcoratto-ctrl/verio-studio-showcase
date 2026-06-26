@@ -28,8 +28,6 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-cobalt: var(--cobalt);
   --color-cobalt-foreground: var(--cobalt-foreground);
-  --color-whatsapp: var(--whatsapp);
-  --color-whatsapp-foreground: var(--whatsapp-foreground);
   --color-footer: var(--footer);
   --color-footer-foreground: var(--footer-foreground);
   --color-hairline: var(--hairline);
@@ -63,8 +61,6 @@
   /* Cobalt blue */
   --cobalt: oklch(0.36 0.22 268);
   --cobalt-foreground: oklch(0.985 0.003 80);
-  --whatsapp: oklch(0.62 0.17 145);
-  --whatsapp-foreground: oklch(0.99 0 0);
   --footer: oklch(0.16 0.008 260);
   --footer-foreground: oklch(0.97 0.003 80);
   --hairline: oklch(0.78 0.005 80);

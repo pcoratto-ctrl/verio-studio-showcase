@@ -62,6 +62,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     output: "Concept moderno per aumentare credibilità e richieste.",
     cta: "Vedi concept",
     url: "demo-dentista.verio.studio",
+    isReal: false,
+    projectUrl: "",
   },
   {
     id: "estetica",
@@ -76,5 +78,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     output: "Concept premium per valorizzare l'attività online.",
     cta: "Vedi concept",
     url: "demo-estetica.verio.studio",
+    isReal: false,
+    projectUrl: "",
   },
 ];

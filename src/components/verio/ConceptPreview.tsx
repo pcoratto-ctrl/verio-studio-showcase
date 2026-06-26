@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { EASE } from "./motion";
-import michelaPreview from "@/assets/michela-aielli-preview.png.asset.json";
+const michelaPreview = { url: "/__l5e/assets-v1/b16ef02a-d917-4e1d-af2b-89f9e5578859/michela-aielli-preview.png" };
 
 type Variant = "fisio" | "dentista" | "estetica";
 

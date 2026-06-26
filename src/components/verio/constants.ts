@@ -17,7 +17,7 @@ export const NAV_LINKS = [
 ];
 
 // Replace with the live URL when available.
-export const FISIO_PROJECT_URL = "";
+export const FISIO_PROJECT_URL = "https://www.michelaaielli.it";
 
 export type CaseStudy = {
   id: "fisio" | "dentista" | "estetica";
@@ -37,19 +37,24 @@ export type CaseStudy = {
 export const CASE_STUDIES: CaseStudy[] = [
   {
     id: "fisio",
-    title: "Studio fisioterapico",
+    title: "Michela Aielli",
     label: "Caso reale",
     description:
-      "Sito web realizzato per presentare servizi, trattamenti, informazioni dello studio e contatti in modo chiaro e professionale.",
-    problema: "Presenza online poco chiara e poco valorizzata.",
-    obiettivo: "Trasmettere fiducia e rendere semplici le informazioni.",
-    soluzione: "Sito responsive, sezioni ordinate, CTA verso il contatto.",
-    output: "Sito moderno, pulito e facile da navigare.",
+      "Sito web per una fisioterapista a Parma specializzata in dolore persistente, perimenopausa e fibromialgia. Metodo integrato con Taopatch®, Pilates reformer e fotobiomodulazione.",
+    problema:
+      "Presenza online ridotta e poco distintiva in un settore medico locale competitivo.",
+    obiettivo:
+      "Rendere chiare le specializzazioni, il metodo e le vie di contatto, invitando alla prenotazione.",
+    soluzione:
+      "One-page strutturato con hero empatica, sezioni servizi, approccio, recensioni, FAQ e CTA contatto.",
+    output:
+      "Identità web professionale, maggiore fiducia e aumento delle richieste di valutazione.",
     cta: "Vedi progetto",
-    url: "studio-fisio.it",
+    url: "michelaaielli.it",
     isReal: true,
     projectUrl: FISIO_PROJECT_URL,
   },
+
   {
     id: "dentista",
     title: "Studio dentistico",

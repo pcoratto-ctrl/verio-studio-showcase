@@ -1,9 +1,9 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { EASE } from "./motion";
 import { MaskedLines, FadeIn } from "./TextReveal";
-import { WhatsAppButton } from "./WhatsAppIconButton";
+import { ExploreButton } from "./ExploreButton";
+import { WhatsAppIcon } from "./WhatsAppIconButton";
 
 export function Hero({ start = true }: { start?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -45,8 +45,8 @@ export function Hero({ start = true }: { start?: boolean }) {
           {/* Brand card */}
           <motion.div
             style={{ y }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={start ? { opacity: 1, y: 0 } : { opacity: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={start ? { opacity: 1, x: 0 } : { opacity: 0 }}
             transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}
             className="lg:col-span-3"
           >
@@ -81,33 +81,27 @@ export function Hero({ start = true }: { start?: boolean }) {
               ]}
             />
 
-            <FadeIn start={start} delay={0.85} className="mt-8 max-w-2xl">
+            <FadeIn start={start} delay={0.9} className="mt-8 max-w-2xl">
               <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Verio Studio realizza siti web moderni, chiari e responsive per attività locali e
                 professionisti che vogliono presentarsi meglio online.
               </p>
             </FadeIn>
 
-            <FadeIn start={start} delay={1.0} className="mt-10 flex flex-wrap items-center gap-3">
-              <a
-                href="#lavori"
-                className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background transition-all hover:opacity-90"
-              >
-                Guarda i lavori
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </a>
+            <FadeIn start={start} delay={1.05} className="mt-10 flex flex-wrap items-center gap-3">
+              <ExploreButton />
               <a
                 href="#contatti"
-                className="inline-flex items-center gap-2 rounded-full border border-foreground px-6 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground hover:text-background"
+                className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
               >
                 Contattaci
               </a>
-              <WhatsAppButton variant="outline" />
+              <WhatsAppIcon variant="outline" />
             </FadeIn>
 
             <FadeIn
               start={start}
-              delay={1.15}
+              delay={1.2}
               className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:text-xs"
             >
               <span>— siti responsive</span>

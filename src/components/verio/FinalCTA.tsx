@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { WhatsAppIcon } from "./WhatsAppIconButton";
 import { WHATSAPP_URL } from "./constants";
 
 export function FinalCTA() {
@@ -23,7 +24,7 @@ export function FinalCTA() {
           </p>
         </Reveal>
         <Reveal delay={0.2}>
-          <div className="mt-12 flex flex-wrap gap-3">
+          <div className="mt-12 flex flex-wrap items-center gap-3">
             <a
               href="#contatti"
               className="inline-flex items-center gap-2 rounded-full bg-cobalt-foreground px-6 py-3.5 text-sm font-medium text-cobalt transition-transform hover:scale-[1.02]"
@@ -34,16 +35,23 @@ export function FinalCTA() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-cobalt-foreground/40 px-6 py-3.5 text-sm font-medium text-cobalt-foreground transition-colors hover:bg-cobalt-foreground hover:text-cobalt"
+              aria-label="Scrivici su WhatsApp"
+              className="grid h-12 w-12 place-items-center rounded-full border border-cobalt-foreground/40 text-cobalt-foreground transition-colors hover:bg-cobalt-foreground hover:text-cobalt"
             >
-              <MessageCircle className="h-4 w-4" />
-              Scrivici su WhatsApp
+              <MessageCircle className="h-5 w-5" />
             </a>
+            <span className="ml-1 text-xs uppercase tracking-[0.22em] text-cobalt-foreground/60">
+              — o scrivici su WhatsApp
+            </span>
           </div>
         </Reveal>
       </div>
       <div className="pointer-events-none absolute -bottom-40 -right-40 h-[480px] w-[480px] rounded-full border border-cobalt-foreground/15" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-[280px] w-[280px] rounded-full border border-cobalt-foreground/20" />
+      {/* Keep WhatsAppIcon import used for tree-shake safety */}
+      <div className="hidden">
+        <WhatsAppIcon />
+      </div>
     </section>
   );
 }

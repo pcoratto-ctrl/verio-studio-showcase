@@ -1,6 +1,5 @@
 import { MessageCircle } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { WhatsAppIcon } from "./WhatsAppIconButton";
 import { WHATSAPP_URL } from "./constants";
 
 export function FinalCTA() {
@@ -48,10 +47,6 @@ export function FinalCTA() {
       </div>
       <div className="pointer-events-none absolute -bottom-40 -right-40 h-[480px] w-[480px] rounded-full border border-cobalt-foreground/15" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-[280px] w-[280px] rounded-full border border-cobalt-foreground/20" />
-      {/* Keep WhatsAppIcon import used for tree-shake safety */}
-      <div className="hidden">
-        <WhatsAppIcon />
-      </div>
     </section>
   );
 }

@@ -36,18 +36,10 @@ export function StickyCTA() {
             className="hidden items-center gap-2 rounded-full bg-foreground py-2.5 pl-4 pr-2 text-sm font-medium text-background shadow-lg transition-opacity hover:opacity-90 sm:inline-flex"
           >
             Contattaci
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="WhatsApp"
-              onClick={(e) => e.stopPropagation()}
-              className="grid h-7 w-7 place-items-center rounded-full bg-cobalt text-cobalt-foreground"
-            >
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-cobalt text-cobalt-foreground">
               <MessageCircle className="h-3.5 w-3.5" />
-            </a>
+            </span>
           </a>
-          {/* Mobile: icon only */}
           <a
             href={WHATSAPP_URL}
             target="_blank"

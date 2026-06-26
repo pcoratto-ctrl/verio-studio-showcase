@@ -16,6 +16,9 @@ export const NAV_LINKS = [
   { id: "contatti", label: "contatti" },
 ];
 
+// Replace with the live URL when available.
+export const FISIO_PROJECT_URL = "";
+
 export type CaseStudy = {
   id: "fisio" | "dentista" | "estetica";
   title: string;
@@ -27,6 +30,8 @@ export type CaseStudy = {
   output: string;
   cta: string;
   url: string;
+  isReal: boolean;
+  projectUrl: string;
 };
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -42,6 +47,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     output: "Sito moderno, pulito e facile da navigare.",
     cta: "Vedi progetto",
     url: "studio-fisio.it",
+    isReal: true,
+    projectUrl: FISIO_PROJECT_URL,
   },
   {
     id: "dentista",
@@ -55,6 +62,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     output: "Concept moderno per aumentare credibilità e richieste.",
     cta: "Vedi concept",
     url: "demo-dentista.verio.studio",
+    isReal: false,
+    projectUrl: "",
   },
   {
     id: "estetica",
@@ -69,5 +78,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     output: "Concept premium per valorizzare l'attività online.",
     cta: "Vedi concept",
     url: "demo-estetica.verio.studio",
+    isReal: false,
+    projectUrl: "",
   },
 ];

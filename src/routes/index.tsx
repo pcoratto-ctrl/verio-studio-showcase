@@ -4,6 +4,7 @@ import { Toaster } from "sonner";
 import { Loader } from "@/components/verio/Loader";
 import { MenuButton, MenuOverlay } from "@/components/verio/Menu";
 import { StickyCTA } from "@/components/verio/StickyCTA";
+import { ScrollProgress } from "@/components/verio/ScrollProgress";
 import { Hero } from "@/components/verio/Hero";
 import { Intro } from "@/components/verio/Intro";
 import { Studio } from "@/components/verio/Studio";
@@ -38,16 +39,18 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [ready, setReady] = useState(false);
 
   return (
     <main className="min-h-screen bg-background text-foreground antialiased">
-      <Loader />
+      <Loader onDone={() => setReady(true)} />
+      <ScrollProgress />
       <MenuButton open={menuOpen} onToggle={() => setMenuOpen((v) => !v)} />
       <MenuOverlay open={menuOpen} onClose={() => setMenuOpen(false)} />
       <StickyCTA />
       <Toaster position="top-center" />
 
-      <Hero />
+      <Hero start={ready} />
       <Intro />
       <Studio />
       <Services />

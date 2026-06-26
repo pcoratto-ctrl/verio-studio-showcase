@@ -34,7 +34,7 @@ export function FinalCTA() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3.5 text-sm font-medium text-whatsapp-foreground transition-transform hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 rounded-full border border-cobalt-foreground/40 px-6 py-3.5 text-sm font-medium text-cobalt-foreground transition-colors hover:bg-cobalt-foreground hover:text-cobalt"
             >
               <MessageCircle className="h-4 w-4" />
               Scrivici su WhatsApp

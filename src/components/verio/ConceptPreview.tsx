@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { EASE } from "./motion";
+import michelaPreview from "@/assets/michela-aielli-preview.png.asset.json";
 
 type Variant = "fisio" | "dentista" | "estetica";
 
 /**
  * Designed CSS preview placeholders for case studies.
- * - fisio: elegant skeleton, "Screenshot in arrivo"
+ * - fisio: real project screenshot (Michela Aielli)
  * - dentista: clinic-style designed concept
  * - estetica: beauty/visual designed concept
  */
@@ -56,58 +57,35 @@ export function ConceptMobile({ variant }: { variant: Variant }) {
   );
 }
 
-/* ---------- FISIO (real, elegant placeholder) ---------- */
+/* ---------- FISIO (real project screenshot) ---------- */
 function FisioBoard() {
   return (
-    <div className="relative grid h-full grid-cols-12 gap-3 bg-secondary/40 p-6">
-      <div className="col-span-12 flex items-center justify-between">
-        <div className="h-3 w-24 rounded-sm bg-foreground/70" />
-        <div className="flex gap-3">
-          <div className="h-2 w-10 rounded-sm bg-foreground/30" />
-          <div className="h-2 w-10 rounded-sm bg-foreground/30" />
-          <div className="h-2 w-10 rounded-sm bg-foreground/30" />
-        </div>
-      </div>
-      <div className="col-span-7 row-span-4 mt-2 rounded-md bg-card p-5">
-        <div className="h-2 w-16 rounded-sm bg-cobalt" />
-        <div className="mt-4 h-5 w-3/4 rounded-sm bg-foreground/80" />
-        <div className="mt-2 h-5 w-1/2 rounded-sm bg-foreground/50" />
-        <div className="mt-6 h-2 w-2/3 rounded-sm bg-foreground/20" />
-        <div className="mt-1.5 h-2 w-3/5 rounded-sm bg-foreground/20" />
-        <div className="mt-6 inline-block h-7 w-28 rounded-full bg-foreground" />
-      </div>
-      <div className="col-span-5 row-span-4 mt-2 rounded-md bg-cobalt/90 p-5">
-        <div className="h-2 w-12 rounded-sm bg-cobalt-foreground/40" />
-        <div className="mt-4 h-2 w-2/3 rounded-sm bg-cobalt-foreground/80" />
-        <div className="mt-1.5 h-2 w-1/2 rounded-sm bg-cobalt-foreground/60" />
-      </div>
-      <div className="col-span-4 row-span-1 mt-2 rounded-md bg-card" />
-      <div className="col-span-4 row-span-1 mt-2 rounded-md bg-card" />
-      <div className="col-span-4 row-span-1 mt-2 rounded-md bg-card" />
-      <div className="pointer-events-none absolute right-4 top-4 rounded-full border border-hairline bg-background/80 px-2 py-1 text-[9px] uppercase tracking-[0.18em] text-muted-foreground">
-        Screenshot in arrivo
+    <div className="relative h-full w-full bg-secondary/40">
+      <img
+        src={michelaPreview.url}
+        alt="Anteprima sito Michela Aielli — fisioterapista a Parma"
+        className="h-full w-full object-cover object-top"
+        loading="lazy"
+      />
+      <div className="pointer-events-none absolute left-4 top-4 rounded-full border border-hairline bg-background/90 px-2.5 py-1 text-[9px] uppercase tracking-[0.18em] text-muted-foreground backdrop-blur-sm">
+        Progetto live
       </div>
     </div>
   );
 }
 function FisioMobile() {
   return (
-    <div className="h-full bg-secondary/40 p-2.5 pt-5">
-      <div className="h-2 w-12 rounded-sm bg-foreground/70" />
-      <div className="mt-3 h-12 rounded-md bg-card p-2">
-        <div className="h-1.5 w-8 rounded-sm bg-cobalt" />
-        <div className="mt-1.5 h-2 w-3/4 rounded-sm bg-foreground/70" />
-        <div className="mt-1 h-2 w-1/2 rounded-sm bg-foreground/40" />
-      </div>
-      <div className="mt-2 h-10 rounded-md bg-cobalt/90" />
-      <div className="mt-2 grid grid-cols-2 gap-1.5">
-        <div className="h-6 rounded-md bg-card" />
-        <div className="h-6 rounded-md bg-card" />
-      </div>
-      <div className="mt-2 h-4 rounded-full bg-foreground" />
+    <div className="relative h-full w-full bg-secondary/40">
+      <img
+        src={michelaPreview.url}
+        alt="Anteprima mobile Michela Aielli"
+        className="h-full w-full object-cover object-top"
+        loading="lazy"
+      />
     </div>
   );
 }
+
 
 /* ---------- DENTISTA (medical, trust) ---------- */
 function DentistaBoard() {
